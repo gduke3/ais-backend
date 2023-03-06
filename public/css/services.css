@@ -1,0 +1,85 @@
+main > .container {
+	padding: 20px 0;
+	text-align: center;
+}
+
+main > .container p {
+	color: #7f8c8d;
+	font-size: 16px;
+	line-height: 160%;
+	font-family: Lato;
+	font-weight: 400;
+}
+
+.imgmark {
+	display: flex;
+	padding-top: 45px;
+	justify-content: space-evenly;
+}
+#turbine {
+	width: 520px;
+	height: 250px;
+	margin-right: 60px;
+}
+.bullets {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+.bul {
+	color: #7f8c8d;
+	display: flex;
+	margin-bottom: 15px;
+	align-items: baseline;
+	font-size: 16px;
+	font-family: Lato;
+	font-weight: 400;
+}
+
+.quad {
+	width: 8px;
+	height: 8px;
+	margin-right: 10px;
+	border-radius: 50%;
+	background-color: #44c78a;
+}
+
+.info {
+	background: #ecf0f1;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.columns {
+	margin: 0 auto;
+	display: flex;
+	width: 960px;
+	justify-content: space-around;
+	text-align: center;
+}
+.colomn {
+	width: 300px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.topic {
+	color: #2c3e50;
+	padding-top: 30px;
+	text-align: center;
+	font-size: 28px;
+	font-family: Lato;
+	font-weight: 300;
+}
+
+.lorem {
+	color: #7f8c8d;
+	padding-top: 25px;
+	width: 300px;
+	line-height: 160%;
+	text-align: center;
+	font-size: 16px;
+	font-family: "Lato";
+	font-weight: 300;
+}
