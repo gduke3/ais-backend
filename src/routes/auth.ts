@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { transformResponse } from "../helpers/transformResponse";
 
 import { Login } from "../sequelize/models/Login";
+import { Test } from "../sequelize/models/Test";
 
 const router = Router();
 
@@ -29,6 +30,30 @@ router.post("/api/signin", async (req, res) => {
 	} as any);
 	if (!userLogin) return res.sendStatus(500);
 	res.send(transformResponse(userLogin));
+});
+
+router.get("/api/fill-test-table", async (_, res) => {
+	const data = Array.from({ length: 10 }).map((_, index) => String(index));
+
+	await Test.bulkCreate(
+		data.map(
+			(item) =>
+				({
+					text: item,
+				} as any)
+		)
+	);
+
+	res.send("filled");
+});
+
+router.get("/api/clear-test-table", async (_, res) => {
+	await Test.destroy({
+		where: {},
+		truncate: true,
+	});
+
+	res.send("deleted");
 });
 
 export default router;

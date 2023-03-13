@@ -6,11 +6,15 @@ import { Vehicle } from "./models/Vehicle";
 import { Cargo } from "./models/Cargo";
 import { Login } from "./models/Login";
 import { User } from "./models/User";
+import { Test } from "./models/Test";
 
 const sequelize = new Sequelize({
-	dialect: "sqlite",
-	storage: "./database.sqlite",
-	models: [User, Vehicle, LoadingPlan, Cargo, Login, Vehicle2LoadingPlan],
+	port: 8889,
+	dialect: "mysql",
+	database: "ais",
+	password: "root",
+	username: "root",
+	models: [User, Vehicle, LoadingPlan, Cargo, Login, Vehicle2LoadingPlan, Test],
 });
 
 export async function connect() {
